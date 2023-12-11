@@ -46,3 +46,74 @@ void impMasRapido(int algMasRapido, double tempMasRapido)
 
     cout << " con un tiempo de " << tempMasRapido << " segundos" << endl;
 }
+
+// Bubble Sort
+void bubbleSort(vector<int>& datos, bool orden)
+{
+    int tamano = datos.size();
+    for (int i = 0; i < tamano - 1; ++i)
+    {
+        for (int j = 0; j < tamano - i - 1; ++j)
+        {
+            if (orden)
+            {
+                if (datos[j] > datos[j + 1])
+                {
+                    swap(datos[j], datos[j + 1]);
+                }
+            }
+            else
+            {
+                if (datos[j] < datos[j + 1])
+                {
+                    swap(datos[j], datos[j + 1]);
+                }
+            }
+        }
+    }
+}
+
+void heapify(vector<int>& datos, int tamano, int indice, bool orden)
+{
+    int mayor = indice;
+    int izquierda = 2 * indice + 1;
+    int derecha = 2 * indice + 2;
+
+    if (orden)
+    {
+        if (izquierda < tamano && datos[izquierda] > datos[mayor])
+        {
+            mayor = izquierda;
+        }
+
+        if (derecha < tamano && datos[derecha] > datos[mayor])
+        {
+            mayor = derecha;
+        }
+    }
+    else
+    {
+        if (izquierda < tamano && datos[izquierda] < datos[mayor])
+        {
+            mayor = izquierda;
+        }
+
+        if (derecha < tamano && datos[derecha] < datos[mayor])
+        {
+            mayor = derecha;
+        }
+    }
+
+    if (mayor != indice)
+    {
+        swap(datos[indice], datos[mayor]);
+        heapify(datos, tamano, mayor, orden);
+    }
+}
+
+int main(){
+
+
+
+    return 0;
+}
