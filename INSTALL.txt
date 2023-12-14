@@ -5,7 +5,8 @@ Instrucciones para realizar la instalación del Programa.
 3. Debe abrir el archivo Proyecto3.cpp en el Visual Studio Code.
 4.  Abre una terminal o línea de comandos en el directorio donde se encuentra el código fuente.
 5. Ejecuta el siguiente comando para compilar el programa:
-    -g++ -o programa.exe archivo.cpp
-    -Ejemplo: Si tu archivo fuente se llama "Proyecto3.cpp" y estás utilizando MinGW, el comando sería:
-    -C:\MinGW\bin\g++.exe -fdiagnostics-color=always -g Proyecto3.cpp -o Proyecto3.exe
+    - g++ -o programa.exe archivo.cpp
+    - Ejemplo: Si tu archivo fuente se llama "Proyecto3.cpp" y estás utilizando MinGW, el comando sería:
+    - C:\MinGW\bin\g++.exe -fdiagnostics-color=always -g Proyecto3.cpp -o Proyecto3.exe
     (Asegúrate de ajustar el comando según el nombre y la ubicación del archivo fuente)
+    - ./Proyecto3
